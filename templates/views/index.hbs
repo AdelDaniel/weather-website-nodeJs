@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main </title>
+    <link rel="icon" href="/img/app_icon.png">
+    <link rel="stylesheet" href="/css/styles.css">
+
+</head>
+
+<body>
+    {{>header}}
+    <main>
+        <Form id="searchForm">
+            <input type="search" placeholder="Enter The Name Of The City!" name="q">
+            <button>Search</button>
+        </Form>
+
+        <p id="main-message"></p>
+        <p id="data-message"></p>
+    </main>
+
+    <h2 id="created-by">Created By {{myName}} </h2>
+    {{>footer}}
+    <script src="/js/app.js"></script>
+</body>
+
+</html>
