@@ -1,3 +1,4 @@
+console.log("client side JavaScript file!");
 const searchForm = document.querySelector("#searchForm");
 const mainMessage = document.querySelector("#main-message");
 const dataMessage = document.querySelector("#data-message");
