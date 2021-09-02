@@ -45,9 +45,9 @@ app.get("", (req, res) => {
   // first argument is the particular view we wanna use 'index'>> index must match up with name at views
   // second argument is the object that we wanna that view to access
   res.render("index", {
-    title: "Know The Weather",
-    myName: "Adel ",
-    aboutPage: "This is the main Page",
+    title: "Know Weather By Adel!",
+    myName: "Adel Nabil",
+    aboutPage: "This is the main page",
     copyRights: copyRights,
   });
 });
