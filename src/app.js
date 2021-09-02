@@ -18,6 +18,9 @@ const partialsPath = path.join(__dirname, "../templates/partials");
 
 console.log(publicDirectoryPath);
 const app = express();
+
+const port = process.env.PORT || 3000; // port = process.env.PORT if it is Exist
+
 //-------------------------------------------------/
 
 // the next 2 lines to setup handlebars engines and view locations
@@ -114,6 +117,6 @@ app.get("*", (req, res) => {
 // the next method allow you to start the server and  get the data from server on port 3000
 // so without it and without run app.js => you can not recive anything form app.get()
 // and any change will need you to restart the server
-app.listen(3000, () => {
-  console.log("listen on server 3000");
+app.listen(port, () => {
+  console.log(`listen on server ${port}`);
 });

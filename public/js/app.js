@@ -3,7 +3,7 @@ const searchForm = document.querySelector("#searchForm");
 const mainMessage = document.querySelector("#main-message");
 const dataMessage = document.querySelector("#data-message");
 
-const url = "http://localhost:3000/weather?q=";
+const url = "/weather?q=";
 const fetchData = (cityName = "") =>
   fetch(`${url}${cityName}`).then((response) => {
     response.json().then((data) => {
