@@ -1,14 +1,15 @@
 const request = require("postman-request");
-const keys = require("./api-keys");
 
 /// here in this getting data form api there are 2 types of errors
 /// 1:: is the low level error :ex: internet connection error
 /// 2:: is from the server and it's returend in the body
 
+const mapboxKey = process.env.MAP_BOX_KEY;
+
 const getGeoCode = (address, callback) => {
   const mapboxUrl = `https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(
     address
-  )}.json?access_token=${keys.mapboxKey}&limit=1`;
+  )}.json?access_token=${mapboxKey}&limit=1`;
 
   request(
     { url: mapboxUrl, json: true },

@@ -1,12 +1,13 @@
 const request = require("postman-request");
-const keys = require("./api-keys");
 
 /// here in this getting data form api there are 2 types of errors
 /// 1:: is the low level error :ex: internet connection error
 /// 2:: is from the server and it's returend in the body
 
+const WeatherStackKey = process.env.WEATHER_STACK_KEY;
+
 const getForecast = ({ latitude, longitude } = {}, callback) => {
-  const WeatherStackUrl = `http://api.weatherstack.com/current?access_key=${keys.WeatherStackKey}&query=${latitude},${longitude}&units=m`;
+  const WeatherStackUrl = `http://api.weatherstack.com/current?access_key=${WeatherStackKey}&query=${latitude},${longitude}&units=m`;
 
   //json :true >>> this will return parsed object so >>  no need fpr JSON.parse(body)
   request(

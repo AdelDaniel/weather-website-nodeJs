@@ -1,3 +1,5 @@
+require("dotenv").config(); //add .env to prevent the key to pushed to github
+
 const geoCode = require("./utils/geo-code");
 const forecast = require("./utils/forecast");
 const path = require("path");
